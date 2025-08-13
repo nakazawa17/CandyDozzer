@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CandyManager : MonoBehaviour
 {
+
     const int DefaultCandyAmount = 30;
     const int RecoverySeconds = 10;
 
@@ -44,6 +45,7 @@ public class CandyManager : MonoBehaviour
     {
         if (candy < DefaultCandyAmount && counter <= 0)
         {
+            // 処理が終わるのをまつことなく進むので、コルーチンと同時に進行される
             StartCoroutine(RecoverCandy());
         }
     }
